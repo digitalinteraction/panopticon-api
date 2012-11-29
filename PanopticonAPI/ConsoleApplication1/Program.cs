@@ -11,8 +11,8 @@ namespace Panopticonize
     {
         static void Main(string[] args)
         {
-            Panopticonize panopticon = new Panopticonize("6vbqupuahctdyhu");
-            var f = panopticon.UploadForProcessing(Directory.GetCurrentDirectory()+"\\test.mp4");
+            Panopticonize panopticon = new Panopticonize("--my api key--");
+            var f = panopticon.UploadForProcessing("--my file==");
             f.OnPlaceInQueueChanged += new Action<int,int>(f_OnPlaceInQueueChanged);
             f.OnProcessProgressChanged += new Action<int>(f_OnProgressChanged);
             f.OnUploadProgressChanged += new Action<int>(f_OnUploadProgressChanged);
